@@ -1,7 +1,6 @@
 # 🚀 Multi Shooting Game
-<img width="500" height="887" alt="lobby" src="https://github.com/user-attachments/assets/72346fae-199e-499c-a221-71c88580a8ab" />
 
-<img width="502" height="889" alt="game" src="https://github.com/user-attachments/assets/0d059559-f6d5-4eec-b8c7-05589e05cbc8" />
+<img width="1300" height="1080" alt="multishootinggame" src="https://github.com/user-attachments/assets/235d3c39-2df0-41a6-8e2a-590521901b4a" />
 
 이 프로젝트는 **골드메탈(Goldmetal)** 님의 Unity 2D 슈팅게임 강좌를 기반으로 제작되었으며,
 
