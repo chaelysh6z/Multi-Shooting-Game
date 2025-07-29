@@ -80,7 +80,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     /// </summary>
     public void LeaveRoom()
     {
-        PhotonNetwork.LeaveRoom();
+        if (PhotonNetwork.IsConnectedAndReady && PhotonNetwork.InRoom)
+            PhotonNetwork.LeaveRoom();
     }
 
     /// <summary>

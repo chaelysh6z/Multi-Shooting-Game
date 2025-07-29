@@ -60,7 +60,7 @@ public class Player : Aircraft
 
     void Update()
     {
-        if (!isControllable || !photonView.IsMine)
+        if (!photonView.IsMine || !isControllable)
             return;
 
         Move();
@@ -71,7 +71,7 @@ public class Player : Aircraft
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!photonView.IsMine) return;
+        if (!photonView.IsMine || !isControllable) return;
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Border"))  // 화면 끝에 닿았을 때
         {
