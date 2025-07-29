@@ -299,8 +299,6 @@ public class Player : Aircraft
         if (!isButtonB)
             return;
 #endif
-        Debug.Log(isButtonB);
-
         if (isBoomTime || boom == 0)
         {
             //isButtonB = false;
