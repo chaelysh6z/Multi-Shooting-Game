@@ -2,6 +2,36 @@
 
 <img width="1300" height="1080" alt="multishootinggame" src="https://github.com/user-attachments/assets/235d3c39-2df0-41a6-8e2a-590521901b4a" />
 
+```mermaid
+graph LR
+A[Lobby Scene] --> B[Game Scene]
+B --> A
+
+subgraph Lobby Scene
+    L1[LobbyUIManager]
+    
+end
+
+subgraph Game Scene
+    G1[Master Client GameManager]
+    G2[GameUIManager]
+    I1[InputBridge]
+    G1 --> P[Player]
+    G1 --> E[Enemy]
+    E --> I[Item]
+    G2 --> G1
+    I1 --> P
+end
+
+subgraph DontDestroyOnLoad
+	N1[NetworkManager]
+	P1[PoolManager]
+	N1 --> G1
+	L1 --> N1
+	P1 --> G1
+end
+```
+
 이 프로젝트는 **골드메탈(Goldmetal)** 님의 Unity 2D 슈팅게임 강좌를 기반으로 제작되었으며,
 
 기존 싱글플레이 게임 구조를 **C# 리팩토링 + Photon PUN 2 멀티플레이 지원**으로 확장한 포트폴리오용 프로젝트입니다.
